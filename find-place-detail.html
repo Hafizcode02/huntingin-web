@@ -240,7 +240,7 @@
             modalBody.find('h1').text(response.data.place_name);
             modalBody.find('.card-text').text(response.data.description);
             modalBody.find('#city').text(response.data.city);
-            modalBody.find('#maps_link').attr('href', `http://maps.google.com/?q=${response.data.latitude},${response.data.longitude}`);
+            modalBody.find('#maps_link').attr('href', `${response.data.maps_link}`);
 
             // Show the modal
             $('#exampleModal').modal('show');
