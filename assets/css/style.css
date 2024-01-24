@@ -1,14 +1,10 @@
 :root {
   --black: black;
-  --blue: #5C8BC4;
-  --pink: #F7CACD;
+  --blue: #5c8bc4;
+  --pink: #f7cacd;
   --white: white;
-  --yellow: #FAECBE;
+  --yellow: #faecbe;
   --bg-first: linear-gradient(var(--blue), var(--pink));
-}
-
-body {
-  /* min-height: 5000px; */
 }
 
 /* Landing Page */
@@ -22,7 +18,7 @@ body {
 }
 
 .navbar .navbar-nav a::after {
-  content:'';
+  content: "";
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--blue);
@@ -31,7 +27,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);  
+  transform: scaleX(0.5);
 }
 
 /* Home */
@@ -60,7 +56,8 @@ body {
 #welcome h1,
 #reach h1,
 #about-us h1,
-#our-history h1, h2,
+#our-history h1,
+h2,
 #team h1,
 #find h1 {
   color: var(--blue);
@@ -68,8 +65,8 @@ body {
 
 #welcome p,
 #island p,
-#food p, 
-#find-detail p {  
+#food p,
+#find-detail p {
   text-align: justify;
 }
 
@@ -86,7 +83,7 @@ body {
 }
 
 .svg {
-  margin: 5rem 0rem; 
+  margin: 5rem 0rem;
 }
 
 /* Reach */
@@ -96,7 +93,7 @@ body {
 }
 
 #reach .card {
-  width: 15rem;
+  width: 100%;
 }
 
 #reach img {
@@ -130,7 +127,8 @@ body {
   margin: auto;
 }
 
-#our-history .december-hide, .january-hide {
+#our-history .december-hide,
+.january-hide {
   opacity: 0;
   cursor: default;
 }
@@ -153,47 +151,49 @@ body {
   padding: 0rem 0rem 5rem 0rem;
 }
 
-
 /* Media Queries */
 @media (max-width: 1200px) {
-
 }
 
 @media (max-width: 991px) {
   /* Navbar */
   .navbar .navbar-nav a::after {
-   transform-origin: 0 0;
+    transform-origin: 0 0;
   }
 
   .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.1);  
-  }
-
-  /* Reach */
-  #reach {
-    padding: 0rem 3rem;
-  }
-
-  #reach .card {
-    width: 12rem;
+    transform: scaleX(0.1);
   }
 
   /* About Us Page */
   #about-us .card {
-    width: 120%;
+    width: 100%;
   }
 
   #about-us img {
-    width: 300px;
+    width: 250px;
   }
 
   #our-history img {
     width: 25px;
   }
+
+  /* Find Place Detail Page */
+  .navbar {
+    width: 100%;
+  }
+
+  .home-find-detail {
+    width: 140%;
+  }
+
+  .footer-find-detail {
+    width: 140%;
+  }
 }
 
-/* Mobile Phone */
 @media (max-width: 576px) {
+  /* Landing Page */
   /* Welcome */
   #welcome h1 {
     text-align: center;
@@ -201,28 +201,33 @@ body {
 
   #home img,
   #island img,
-  #welcome img, 
+  #welcome img,
   #food img {
     display: flex;
     margin: auto;
-  } 
-  
+    width: 350px;
+  }
+
   /* Reach */
   #reach {
     padding: 0rem 0rem;
   }
 
   #reach .card {
-    width: 10rem;
+    width: 50%;
+  }
+
+  #reach img {
+    width: 50px;
   }
 
   /* About Us Page */
   #about-us {
-    margin-left: -100px;
+    padding: 5rem 0rem;
   }
 
   #about-us .card {
-    width: 150%;
+    width: 100%;
   }
 
   #about-us img {
@@ -230,28 +235,40 @@ body {
   }
 
   #our-history img {
-    width: 28px;
+    width: 30px;
   }
 
-  #our-history .col-12 {
+  #our-history .col-md-12 {
     padding: 0rem;
   }
 
-  #our-history .december h2, .january h2, .february h2 {
-    font-size: 21px;
+  #our-history .december h2,
+  .january h2,
+  .february h2 {
+    font-size: 17px;
   }
 
-  #our-history .december p, .january p, .february p {
+  #our-history .december p,
+  .january p,
+  .february p {
     font-size: 14px;
   }
 
-  #form .form-select {
+  /* Find Place Page */
+  #form img {
     width: 250px;
-    margin: 0rem -4.5rem;
   }
 
-  #form .form-control {
-    width: 250px;
-    margin: 0rem -4.5rem;
+  /* Find Place Detail Page */
+  .navbar {
+    width: 100%;
+  }
+
+  .home-find-detail {
+    width: 155%;
+  }
+
+  .footer-find-detail {
+    width: 155%;
   }
 }
