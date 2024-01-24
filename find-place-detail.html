@@ -185,6 +185,7 @@
         $("#example").DataTable({
           responsive: true,
           autoWidth: false,
+          scrollX: true,
           ajax: {
             url: `https://huntingin-api-ax5txqps7a-uc.a.run.app/api/tourism/?category=${urlParams.get("category")}&city=${urlParams.get("city")}&price=${urlParams.get("price")}`, // Replace with your server endpoint URL
             dataSrc: "data", // Specify the property that contains the data array
